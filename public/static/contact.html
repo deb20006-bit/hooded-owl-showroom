@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact — HOOD</title>
+<meta name="description" content="Book a private viewing or test drive at the HOOD showroom." />
+<meta property="og:title" content="Contact — HOOD" />
+<meta property="og:description" content="Book a private viewing or test drive at the HOOD showroom." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/png" href="assets/hood-logo.png" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="index.html">
+      <img src="assets/hood-logo.png" alt="HOOD owl logo" width="36" height="36" />
+      <span>HOOD</span>
+    </a>
+    <nav><ul class="nav-links"><li><a href="index.html" class="">Home</a></li><li><a href="fleet.html" class="">Fleet</a></li><li><a href="services.html" class="">Services</a></li><li><a href="about.html" class="">About</a></li><li><a href="contact.html" class="active">Contact</a></li></ul></nav>
+    <a class="btn-sm" href="contact.html">Book a Test Drive</a>
+  </div>
+</header>
+
+<main>
+<section class="page-head" style="max-width:72rem;">
+  <p class="eyebrow">Get in touch</p>
+  <h1>Begin the<br/><span class="text-primary">hunt.</span></h1>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div><h3>Showroom</h3><p>88 Talon Avenue<br/>Midnight District, NV 90210</p></div>
+      <div><h3>Concierge</h3><p>+1 (555) HOOT-911<br/>concierge@hood.cars</p></div>
+      <div><h3>Hours</h3><p class="muted">By appointment only<br/>Dusk till dawn</p></div>
+    </div>
+    <form class="form" id="contactForm" onsubmit="handleSubmit(event)">
+      <div id="formFields">
+        <div class="field"><label>Name</label><input required name="name" /></div>
+        <div class="field"><label>Email</label><input required type="email" name="email" /></div>
+        <div class="field"><label>Vehicle of Interest</label><input name="vehicle" /></div>
+        <div class="field"><label>Message</label><textarea rows="4" name="message"></textarea></div>
+        <button class="btn btn-primary" type="submit">Send Inquiry</button>
+      </div>
+      <div id="formSuccess" class="form-success" style="display:none;">
+        <p class="eyebrow">Received</p>
+        <h3>The owl has heard you.</h3>
+        <p>A concierge will reach you within 12 hours.</p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+<script>
+function handleSubmit(e){
+  e.preventDefault();
+  document.getElementById('formFields').style.display='none';
+  document.getElementById('formSuccess').style.display='block';
+}
+</script>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a class="logo" href="index.html">
+        <img src="assets/hood-logo.png" alt="HOOD owl logo" width="36" height="36" />
+        <span>HOOD</span>
+      </a>
+      <p>Apex of automotive curation. Hand-picked machines for those who hunt the night.</p>
+    </div>
+    <div>
+      <h4>Showroom</h4>
+      <p>88 Talon Avenue<br/>Midnight District, NV 90210</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>+1 (555) HOOT-911<br/>concierge@hood.cars</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 HOOD Motors — Silent. Predatory. Precise.</div>
+</footer>
+</body>
+</html>
